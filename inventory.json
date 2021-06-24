@@ -1,0 +1,39 @@
+{
+    "command": "list",
+    "commandOptions": {
+        "dotFile": "output/921be32c-c7ea-4173-bf5c-9f7490f2f2c3.dot",
+        "title": "",
+        "provider": [
+            "azure"
+        ],
+        "all": true,
+        "graph": true,
+        "defaultExclude": true,
+        "typesExclude": [
+            "IamBinding",
+            "IamPolicy",
+            "ServiceAccount"
+        ]
+    },
+    "programOptions": {
+        "infra": "iac_azure.js",
+        "json": "output/gc-list-921be32c-c7ea-4173-bf5c-9f7490f2f2c3.json"
+    },
+    "result": {
+        "error": false,
+        "results": [
+            {
+                "providerName": "azure",
+                "kind": "livesPerType",
+                "error": false,
+                "results": [
+                    {
+                        "type": "ResourceGroup",
+                        "resources": []
+                    }
+                ]
+            }
+        ],
+        "kind": "livesPerProvider"
+    }
+}
