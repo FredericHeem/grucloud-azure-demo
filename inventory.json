@@ -1,7 +1,7 @@
 {
     "command": "list",
     "commandOptions": {
-        "dotFile": "output/74c94caf-6bc9-4afd-baee-23cbdc4281e2.dot",
+        "dotFile": "output/8085aa84-b4de-4b0e-928e-762000201aab.dot",
         "title": "",
         "provider": [
             "azure"
@@ -17,7 +17,7 @@
     },
     "programOptions": {
         "infra": "iac_azure.js",
-        "json": "output/gc-list-74c94caf-6bc9-4afd-baee-23cbdc4281e2.json"
+        "json": "output/gc-list-8085aa84-b4de-4b0e-928e-762000201aab.json"
     },
     "result": {
         "error": false,
