@@ -1,3 +1,3 @@
 module.exports = () => ({
-  location: "uksouth",
+  projectId: "azure-test",
 });
