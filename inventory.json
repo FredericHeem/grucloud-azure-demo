@@ -1,7 +1,7 @@
 {
     "command": "list",
     "commandOptions": {
-        "dotFile": "output/ef4c7c1c-a7d1-441b-8296-d89398598db4.dot",
+        "dotFile": "output/e4f48bce-9ea7-4d62-aaac-17732013df16.dot",
         "title": "",
         "provider": [
             "azure"
@@ -16,7 +16,7 @@
     },
     "programOptions": {
         "infra": "iac_azure.js",
-        "json": "output/gc-list-ef4c7c1c-a7d1-441b-8296-d89398598db4.json"
+        "json": "output/gc-list-e4f48bce-9ea7-4d62-aaac-17732013df16.json"
     },
     "result": {
         "error": false,
@@ -28,14 +28,16 @@
                 "results": [
                     {
                         "type": "ResourceGroup",
+                        "group": "resourceManagement",
                         "resources": [
                             {
-                                "uri": "azure::ResourceGroup::/subscriptions/8e0e234e-8384-438d-a652-105826b63bc9/resourceGroups/NetworkWatcherRG",
+                                "uri": "azure::resourceManagement::ResourceGroup::/subscriptions/8e0e234e-8384-438d-a652-105826b63bc9/resourceGroups/NetworkWatcherRG",
                                 "name": "NetworkWatcherRG",
                                 "displayName": "NetworkWatcherRG",
                                 "id": "/subscriptions/8e0e234e-8384-438d-a652-105826b63bc9/resourceGroups/NetworkWatcherRG",
                                 "providerName": "azure",
                                 "type": "ResourceGroup",
+                                "group": "resourceManagement",
                                 "live": {
                                     "id": "/subscriptions/8e0e234e-8384-438d-a652-105826b63bc9/resourceGroups/NetworkWatcherRG",
                                     "name": "NetworkWatcherRG",
