@@ -1,14 +1,13 @@
 {
     "command": "list",
     "commandOptions": {
-        "dotFile": "output/28310fb1-985c-47d2-9ebd-60656178ca5b.dot",
+        "dotFile": "output/ef4c7c1c-a7d1-441b-8296-d89398598db4.dot",
         "title": "",
         "provider": [
             "azure"
         ],
         "all": true,
         "graph": true,
-        "defaultExclude": true,
         "typesExclude": [
             "IamBinding",
             "IamPolicy",
@@ -17,7 +16,7 @@
     },
     "programOptions": {
         "infra": "iac_azure.js",
-        "json": "output/gc-list-28310fb1-985c-47d2-9ebd-60656178ca5b.json"
+        "json": "output/gc-list-ef4c7c1c-a7d1-441b-8296-d89398598db4.json"
     },
     "result": {
         "error": false,
@@ -29,7 +28,31 @@
                 "results": [
                     {
                         "type": "ResourceGroup",
-                        "resources": []
+                        "resources": [
+                            {
+                                "uri": "azure::ResourceGroup::/subscriptions/8e0e234e-8384-438d-a652-105826b63bc9/resourceGroups/NetworkWatcherRG",
+                                "name": "NetworkWatcherRG",
+                                "displayName": "NetworkWatcherRG",
+                                "id": "/subscriptions/8e0e234e-8384-438d-a652-105826b63bc9/resourceGroups/NetworkWatcherRG",
+                                "providerName": "azure",
+                                "type": "ResourceGroup",
+                                "live": {
+                                    "id": "/subscriptions/8e0e234e-8384-438d-a652-105826b63bc9/resourceGroups/NetworkWatcherRG",
+                                    "name": "NetworkWatcherRG",
+                                    "type": "Microsoft.Resources/resourceGroups",
+                                    "location": "uksouth",
+                                    "properties": {
+                                        "provisioningState": "Succeeded"
+                                    }
+                                },
+                                "cannotBeDeleted": true,
+                                "isDefault": true,
+                                "namespace": "",
+                                "dependencies": [],
+                                "managedByUs": false,
+                                "show": true
+                            }
+                        ]
                     }
                 ]
             }
