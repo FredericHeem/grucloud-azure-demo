@@ -9,8 +9,9 @@ const testPing = ({ host }) =>
     timeout: 3,
   });
 
-const testSsh = async ({ host, username = "ubuntu", password }) =>
+const testSsh = async ({ host, username = "ops", password }) =>
   await new Promise((resolve, reject) => {
+    assert(password);
     const conn = new Client();
     conn
       .on("ready", function () {
@@ -32,15 +33,24 @@ const testSsh = async ({ host, username = "ubuntu", password }) =>
       });
   });
 
-module.exports = ({ resources, config }) => {
+module.exports = ({ provider }) => {
   return {
     name: "azure hooks",
     onDeployed: {
       init: async () => {
         //console.log("azure onDeployed");
-        const publicIpAddress = await resources.publicIpAddress.getLive();
-        const networkInterface = await resources.networkInterface.getLive();
-        const vm = await resources.vm.getLive();
+        const resources = provider.resources();
+        const publicIpAddress = await resources.Network.PublicIPAddress[
+          "rg-vm::ip-address"
+        ].getLive();
+        assert(publicIpAddress);
+        const networkInterface = await resources.Network.NetworkInterface[
+          "rg-vm::network-interface"
+        ].getLive();
+        assert(networkInterface);
+        const vm = await resources.Compute.VirtualMachine[
+          "rg-vm::vm"
+        ].getLive();
         assert(vm, "vm not up");
         //Check network interface id of the vm
         assert.equal(
@@ -89,8 +99,8 @@ module.exports = ({ resources, config }) => {
               fn: async () => {
                 await testSsh({
                   host,
-                  username: process.env.MACHINE_ADMIN_USERNAME,
-                  password: process.env.MACHINE_ADMIN_PASSWORD,
+                  username: process.env.RG_VM_VM_ADMIN_USERNAME,
+                  password: process.env.RG_VM_VM_ADMIN_PASSWORD,
                 });
               },
               isExpectedResult: () => true,

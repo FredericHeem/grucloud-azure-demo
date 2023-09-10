@@ -2,9 +2,19 @@
 
 The purpose of this example is to deploy automatically a virtual machine attached to a public IP address, inside a VPC, secured by firewall rules.
 
-![diagram-target](artifacts/diagram-target.svg)
+```sh
+gc tree
+```
 
-The infrastructure is described in [iac.js](./iac.js), and configured in [config.js](./config.js).
+![resources-mindmap](./artifacts/resources-mindmap.svg)
+
+```sh
+gc graph
+```
+
+![diagram-target.svg](./artifacts/diagram-target.svg)
+
+The infrastructure is described in [resources.js](./resources.js), and configured in [config.js](./config.js).
 
 Hooks are defined in [hook.js](hook.js), it contains a bunch of
 functions which are invoked after resources are created or destroyed. In the case of a virtual machine, we'll ping and connect with SSH programatically thanks to the [ping](https://www.npmjs.com/package/ping) and [ssh2](https://www.npmjs.com/package/ssh2) Javascript library.
@@ -24,9 +34,9 @@ az --version
 Create or edit **default.env** and set the correct values:
 
 ```sh
-TENANT_ID=
-SUBSCRIPTION_ID=
-APP_ID=
+AZURE_TENANT_ID=
+AZURE_SUBSCRIPTION_ID=
+AZURE_CLIENT_ID=
 PASSWORD=
 MACHINE_ADMIN_USERNAME=
 MACHINE_ADMIN_PASSWORD=
@@ -82,7 +92,7 @@ npm i
 
 ### Target Diagram
 
-Based on the infrastructure code [iac.js](./iac.js), GruCloud is able to create a diagram of the target resources showing their dependencies.
+Based on the infrastructure code [resources.js](./resources.js), GruCloud is able to create a diagram of the target resources showing their dependencies.
 
 ```sh
 gc graph
