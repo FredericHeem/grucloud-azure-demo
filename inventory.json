@@ -2,7 +2,7 @@
     "command": "list",
     "commandOptions": {
         "json": "artifacts/inventory.json",
-        "dotFile": "67255b8a-23b9-4272-ac46-e7392c3e7b39.dot",
+        "dotFile": "2ecf4698-bcd2-47f2-9ce4-8df22ec7fcb7.dot",
         "title": "",
         "provider": [
             "azure"
@@ -15,7 +15,7 @@
     "programOptions": {
         "infra": "/app/iac_azure.js",
         "config": "/app/input/config_azure.js",
-        "json": "gc-list-67255b8a-23b9-4272-ac46-e7392c3e7b39.json",
+        "json": "gc-list-2ecf4698-bcd2-47f2-9ce4-8df22ec7fcb7.json",
         "workingDirectory": "/app/output"
     },
     "result": {
