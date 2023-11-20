@@ -23,10 +23,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@grucloud/core": "^12.14.1",
-    "@grucloud/provider-azure": "^12.15.1",
+    "@grucloud/core": "^13.0.9-alpha.0",
+    "@grucloud/provider-azure": "^13.0.9-alpha.0",
     "ping": "0.4.4",
-    "rubico": "2.3.1",
     "ssh2": "1.14.0"
   }
 }
