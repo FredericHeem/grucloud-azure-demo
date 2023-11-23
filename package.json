@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "init": "gc init",
     "tree": "gc tree",
     "tree-png": "gc tree -t png",
     "graph": "gc graph",
@@ -23,8 +24,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@grucloud/core": "^13.0.19-alpha.0",
-    "@grucloud/provider-azure": "^13.0.19-alpha.0",
+    "@grucloud/core": "^13.0.21-alpha.0",
+    "@grucloud/provider-azure": "^13.0.21-alpha.0",
     "ping": "0.4.4",
     "ssh2": "1.14.0"
   }
